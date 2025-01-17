@@ -1,0 +1,17 @@
+Table ShippingShips {
+    id int [pk, increment] // Primary Key
+    name varchar(255) // Name of the cargo ship
+    hauler_id int [ref: > HaulerShips.id] // Foreign key to HaulerShips
+}
+
+Table HaulerShips {
+    id int [pk, increment] // Primary Key
+    name varchar(255) // Name of the hauler ship
+    dock_id int [ref: > Docks.id] // Foreign key to Docks
+}
+
+Table Docks {
+    id int [pk, increment] // Primary Key
+    location varchar(255) // Location in "City, Country"
+    max_capacity decimal(10,2) // Maximum capacity in millions of tons
+}
