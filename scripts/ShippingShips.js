@@ -10,7 +10,7 @@ export const ShippingShipList = () => {
         const hauler = haulerShips.find((h) => h.id === ship.haulerId);
 
         shippingShipsHTML += `
-            <li>
+            <li data-id="${ship.id}" data-hauler-id="${ship.haulerId}" data-name="${ship.name}" data-type="shipping-ship">
                 Name: ${ship.name} - Assigned Hauler: ${hauler ? hauler.name : "No Hauler Assigned"}
             </li>
         `;

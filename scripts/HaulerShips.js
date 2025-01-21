@@ -10,7 +10,7 @@ export const HaulerShipList = () => {
         const dock = docks.find((d) => d.id === hauler.dockId);
 
         haulersHTML += `
-            <li>
+            <li data-id="${hauler.id}" data-type="hauler">
                 Name: ${hauler.name} - Assigned Dock: ${dock ? dock.location : "No Dock Assigned"}
             </li>
         `;
